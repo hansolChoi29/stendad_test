@@ -8,24 +8,23 @@ const MedalForm = ({ countries, setCountries }) => {
 
   const resetFields = () => {
     setCountryName("");
-    setGoldMedals(0);
-    setSilverMedals(0);
-    setBronzeMedals(0);
+    setGoldMedals("");
+    setSilverMedals("");
+    setBronzeMedals("");
   };
-  //추가
 
   const handleAdd = (e) => {
     e.preventDefault();
     if (!countryName) {
-      alert("제대로!");
+      alert(" 국가명 제대로!");
       return;
     }
     if (goldMedals >= 100 || silverMedals >= 100 || bronzeMedals >= 100) {
-      alert("제대로!");
+      alert("숫자 제대로!");
       return;
     }
     if (goldMedals < 0 || silverMedals < 0 || bronzeMedals < 0) {
-      alert("제대로!");
+      alert("숫자 제대로!");
       return;
     }
     const existingCountry = countries.find(

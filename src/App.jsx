@@ -17,3 +17,4 @@ const App = () => {
 };
 //삭제
 export default App;
+//totalMedal =gold+silver+bronze
